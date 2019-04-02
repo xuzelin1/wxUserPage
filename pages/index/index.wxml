@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<scroll-view>
+
+  <view class="waveWrapper waveAnimation" style='background-color:{{evening}}'>
+    <view class="waveWrapperInner bgTop">
+      <image class="wave waveTop" src="../../images/wave-top.png"></image>
+    </view>
+    <view class="waveWrapperInner bgMiddle">
+      <image class="wave waveMiddle" src="../../images/wave-mid.png"></image>
+    </view>
+    <view class="waveWrapperInner bgBottom">
+      <image class="wave waveBottom" src="../../images/wave-bot.png"></image>
+    </view>
+  </view>
+
+  <view class='info-view'>
+    <view class='info-left'>
+      <view class='title'>
+        <open-data type="userNickName" lang="zh_CN"></open-data>
+        <image src='../../images/man.png' class='icon sex-icon'></image>
+      </view>
+      <view class='brief'>一个有梦想的年轻人</view>
+    </view>
+    <view class='info-right'>
+      <view class='title-img'>
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </view>
+  </view>
+  <view class='bottom-view'>
+    <view class='bottom-list'>
+
+      <block wx:for="{{operateList}}" wx:key="item.title">
+        <navigator open-type='navigate' url='{{item.url}}'>
+          <view class="kind-list-item">
+            <image src='{{item.iconSrc}}' class='icon'></image>
+            <view class='list-text'>{{item.title}}</view>
+            <image src='../../images/right.png' class='right-circle icon'></image>
+          </view>
+        </navigator>
+        <view class='line'></view>
+      </block>
+      
+    </view>
+  </view>
+</scroll-view>

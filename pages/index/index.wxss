@@ -1,0 +1,160 @@
+/**index.wxss**/
+
+page {
+  background-color: #f1f1f1
+}
+
+.info-view {
+  display: flex;
+  padding: 50rpx 40rpx;
+  padding-bottom: 30rpx
+}
+
+.info-left {
+  width: 75%;
+  margin: auto 0
+}
+
+.info-right {
+  width: 25%
+}
+
+.title {
+  font-size: 45rpx;
+  margin-left: 50rpx;
+}
+
+.brief {
+  font-size: 28rpx;
+  color: gray;
+  padding-top: 10rpx;
+  margin-left: 50rpx;
+}
+
+.title-img {
+  display: block;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow:hidden;
+}
+
+.bottom-view {
+  margin-top: 30rpx;
+}
+
+.kind-list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15rpx;
+  background-color: #f1f1f1;
+}
+
+.list-text {
+  color: black;
+  padding: 18rpx 10rpx;
+  font-size: 32rpx;
+}
+
+.icon {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-right: 10rpx;
+  width: 35rpx;
+  height: 35rpx;
+  margin: auto 20rpx;
+}
+
+.sex-icon {
+  padding-bottom: 0
+}
+
+.right-circle {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 1em;
+  align-content: center;
+}
+
+.line{
+  border-bottom: 1rpx solid #D8D8D8;
+  float: right;
+  margin-right: 50rpx;
+  width: 80%;
+}
+
+.address-img {
+  width: 615rpx;
+  height: 341rpx;
+  margin-left: 35rpx;
+}
+
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(1);
+  }
+
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+.waveWrapper {
+  overflow: hidden;
+  position: relative;
+  height: 50rpx;
+  width: 100%;
+  background: #1296db;
+}
+
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+}
+
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+  height: 24px;
+}
+
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+  height: 19px;
+}
+
+.bgBottom {
+  z-index: 5;
+  height: 14px;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  width: 2160rpx;
+  height: 100%;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+
+.waveAnimation .waveTop {
+  animation: move_wave 30s linear infinite;
+}
+
+.waveAnimation .waveMiddle {
+  animation: move_wave 24s linear infinite;
+}
+
+.waveAnimation .waveBottom {
+  animation: move_wave 12s linear infinite;
+}
